@@ -1,4 +1,5 @@
 use regex::Regex;
+use std::io::{self, Write, Read};
 
 enum Op {
     Plus,
@@ -17,11 +18,6 @@ fn calc(expr: &str) -> f64 {
     // println!("temp expr: {}", temp_expr);
     re.captures_iter(expr).for_each(|cap| {
         let res = calc(&cap["expr"]);
-
-        println!("Cap: {:#?}", cap);
-        println!("result: {:#?}", res);
-        println!("curr expr: {}", temp_expr);
-        println!("next expr: {}", temp_expr.to_string().replace(&cap[0],  &res.to_string()));
         temp_expr = temp_expr.to_string().replace(&cap[0],  &res.to_string());
     });
 
@@ -75,8 +71,19 @@ fn calc(expr: &str) -> f64 {
 
     result
 }
+
+fn get_expr() -> String {
+    print!("? Expression: ");
+    io::stdout().flush().unwrap();
+    let mut buf = String::new();
+    io::stdin().read_line(&mut buf).unwrap();
+
+    buf.trim().to_string()
+}
 fn main() {
-    let expr = "[1 * 2] * [1 + 1]";
-    let result = calc(expr);
-    println!("{} = {}", expr, result)
+    loop {
+        let expr = get_expr();
+        let result = calc(&expr);
+        println!("#> {}", result)
+    }
 }
