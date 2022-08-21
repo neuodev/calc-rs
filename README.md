@@ -19,6 +19,8 @@ Calculator to perform basic arithmetic operations on raw expressions.
 #> 140
 ? Expression: 0.1 / 20 + 14
 #> 14.005
+? Expression: (1 * (2 + 1)) + 1
+#> 4
 ```
 
 ## Supported operations

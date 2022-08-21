@@ -13,7 +13,7 @@ fn split<'a>(expr: &'a str, by: &'a str) -> Vec<&'a str> {
 }
 
 fn calc(expr: &str) -> f64 {
-    let re = Regex::new(r"(\(|\[)(?P<expr>[^\)\]]+)(\)|\])").unwrap();
+    let re = Regex::new(r"(\(|\[)(?P<expr>[^\)\(\]\[]+)(\)|\])").unwrap();
     let mut temp_expr = expr.to_string();
     // println!("temp expr: {}", temp_expr);
     re.captures_iter(expr).for_each(|cap| {
