@@ -1,11 +1,11 @@
 use regex::Regex;
-use std::io::{self, Write, Read};
+use std::io::{self, Write};
 
 enum Op {
-    Plus,
-    Mins,
-    Multi,
-    Div,
+    Plus, // '+'
+    Mins, // '-' 
+    Multi, // '*' | 'x'
+    Div, // '/' 
 }
 
 fn split<'a>(expr: &'a str, by: &'a str) -> Vec<&'a str> {
@@ -83,7 +83,10 @@ fn get_expr() -> String {
 fn main() {
     loop {
         let expr = get_expr();
-        let result = calc(&expr);
-        println!("#> {}", result)
+
+        if !expr.is_empty() {
+            let result = calc(&expr);
+            println!("#> {}", result)
+        }
     }
 }
