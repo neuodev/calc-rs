@@ -30,11 +30,12 @@ Calculator to perform basic arithmetic operations on raw expressions.
 ```
 
 # How it works
-we call the whole input **experssion** (`expr` for short). Every `expr` might be made of combination of `terms` and other `expr`.
+we call the whole input an **experssion** (`expr` for short). Every `expr` might be made of combination of `terms`, `operators` and other `expr`.
 For example take this input `1 + 2 [14 * (22 + 4)] + 7`. 
 
 - `1 + 2 [14 * (22 + 4)] + 7` this is as whole called `expr`
-- `1 + 2` is a `term`
+- `1` is a `term`
+- `+` is an operator
 - `[14 * (22 + 4)]` another `expr`
 - `(22 + 4)` another `expr`
 
