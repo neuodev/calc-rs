@@ -6,6 +6,12 @@ Calculator to perform basic arithmetic operations on raw expressions.
     <img src="./icon.gif" alt="Numbers Adventure" title="Numbers Adventure"/>
 <p>
 
+## Preview
+
+<p align="center">
+    <img src="./preview.gif" alt="preview" title="preview"/>
+<p>
+
 ## Examples
 
 ```bash
