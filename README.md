@@ -39,7 +39,7 @@ at the core you will find this single `regexp`
 let re = Regex::new(r"(\(|\[)(?P<expr>[^\)\(\]\[]+)(\)|\])").unwrap();
 ```
 
-This regexp should match any nested experssion that is inside `()` or `[]` or both. It will match **_from inside out_** for example conside this experssion `[()()]` it will match `()` then `()` then the whole `[() ()]` experssion
+This regexp should match any nested experssion that is inside `()` or `[]` or both. It will match **_from inside out_** for example consider this experssion `[()()]` it will match `()` then `()` then the whole `[() ()]` experssion
 
 I am sure if i tried to read this `regexp` on week from now I will not be able to do so! for this reason I am using interactive tool called [regexp101.com](https://regex101.com/r/Z8ELny/1) that make `regexp` easy to develop
 
