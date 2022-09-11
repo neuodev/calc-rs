@@ -15,7 +15,6 @@ fn split<'a>(expr: &'a str, by: &'a str) -> Vec<&'a str> {
 fn calc(expr: &str) -> f64 {
     let re = Regex::new(r"(\(|\[)(?P<expr>[^\)\(\]\[]+)(\)|\])").unwrap();
     let mut temp_expr = expr.to_string();
-    // println!("temp expr: {}", temp_expr);
     re.captures_iter(expr).for_each(|cap| {
         let res = calc(&cap["expr"]);
         temp_expr = temp_expr.to_string().replace(&cap[0],  &res.to_string());
@@ -23,7 +22,6 @@ fn calc(expr: &str) -> f64 {
 
 
     let expr = temp_expr.as_str();
-    // println!("Expr: {}", expr);
     let mut terms = split(expr, "+");
     let mut op = Op::Plus;
 
