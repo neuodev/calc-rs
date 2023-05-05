@@ -1,4 +1,4 @@
-# Numbers Adventure
+# `calc-rs`
 
 Calculator to perform basic arithmetic operations on raw expressions.
 
