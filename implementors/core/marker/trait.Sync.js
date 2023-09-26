@@ -1,0 +1,3 @@
+(function() {var implementors = {
+"calc":[["impl <a class=\"trait\" href=\"https://doc.rust-lang.org/1.72.1/core/marker/trait.Sync.html\" title=\"trait core::marker::Sync\">Sync</a> for <a class=\"enum\" href=\"calc/enum.Op.html\" title=\"enum calc::Op\">Op</a>",1,["calc::Op"]]]
+};if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()
