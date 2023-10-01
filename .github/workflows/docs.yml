@@ -4,6 +4,7 @@ name: CI
 
 jobs:
   build_docs:
+    if: github.event.pull_request.merged && github.event.pull_request.base.ref == 'main'
     name: calc-rs
     runs-on: ubuntu-latest
     steps:
