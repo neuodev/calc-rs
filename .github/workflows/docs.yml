@@ -15,10 +15,8 @@ jobs:
         with:
           command: doc
           args: --no-deps
-
       - name: Prepare generated docs
         run: echo "<meta http-equiv=\"refresh\" content=\"0; url=calc\">" > target/doc/index.html
-
       - name: Deploy to GH Pages 🚀
         uses: peaceiris/actions-gh-pages@v3
         with:
